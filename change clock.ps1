@@ -1,4 +1,25 @@
-﻿# Set the values
+﻿<#
+    .SYNOPSIS
+    Time Zone Adjustment Script for Israel Standard Time
+
+    .DESCRIPTION
+    This PowerShell script is designed to update the Windows Registry to set the time zone information for Israel Standard Time.
+    It handles the necessary adjustments and configurations for the system's time zone settings.
+
+    .AUTHOR
+    Script written by Itamar.
+    For more scripts and projects, visit my GitHub: https://github.com/itamarGB
+
+    .NOTES
+    Created: 01/29/2024
+
+    .EXAMPLE
+    To run this script, just execute it in a PowerShell session with administrative privileges.
+    Ensure that you understand the changes being made to the system's registry.
+
+    
+#>
+# Set the values
 $registryPath = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones\Israel Standard Time"
 Set-ItemProperty -Path $registryPath -Name "Display" -Value "(UTC+02:00) Jerusalem"
 Set-ItemProperty -Path $registryPath -Name "Dlt" -Value "Jerusalem Daylight Time"
